@@ -2,7 +2,9 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "1.8.21"
-    application
+    id("com.github.johnrengelman.shadow") version ("7.1.1")
+    `java-library`
+    `maven-publish`
 }
 
 group = "org.makentoshe.booruchan"
@@ -24,6 +26,17 @@ tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"
 }
 
-application {
-    mainClass.set("MainKt")
+
+publishing {
+    publications {
+        register<MavenPublication>("maven") {
+            groupId = "om.github.makentoshe"
+            artifactId = "booruchan-extension-base"
+            version = "0.0.1"
+
+            afterEvaluate {
+                from(components["java"])
+            }
+        }
+    }
 }
