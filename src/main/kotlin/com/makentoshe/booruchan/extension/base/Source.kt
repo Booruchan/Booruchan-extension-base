@@ -11,6 +11,6 @@ interface Source {
     val title: String
 
     /** Network request factory for checking source availability */
-    val healthCheckFactory: HealthCheckFactory
+    val healthCheckFactory: HealthCheckFactory? get() = null
 }
 
