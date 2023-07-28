@@ -1,5 +1,7 @@
 package com.makentoshe.booruchan.extension.base
 
+import com.makentoshe.booruchan.extension.base.factory.HealthCheckFactory
+
 interface Source {
 
     /** Should be unique for each source */
@@ -8,5 +10,7 @@ interface Source {
     /** Title how it will be displayed to user */
     val title: String
 
+    /** Network request factory for checking source availability */
+    val healthCheckFactory: HealthCheckFactory
 }
 
