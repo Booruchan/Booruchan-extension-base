@@ -10,6 +10,9 @@ interface Source {
     /** Title how it will be displayed to user */
     val title: String
 
+    /** Source base url */
+    val host: String
+
     /** Network request factory for checking source availability */
     val healthCheckFactory: HealthCheckFactory? get() = null
 }
