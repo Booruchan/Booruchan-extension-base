@@ -1,5 +1,6 @@
 package com.makentoshe.booruchan.extension.base
 
+import com.makentoshe.booruchan.extension.base.factory.FetchPostsFactory
 import com.makentoshe.booruchan.extension.base.factory.HealthCheckFactory
 
 interface Source {
@@ -15,5 +16,8 @@ interface Source {
 
     /** Network request factory for checking source availability */
     val healthCheckFactory: HealthCheckFactory? get() = null
+
+    /** Network request and parsing providing factory for retrieving posts */
+    val fetchPostsFactory: FetchPostsFactory? get() = null
 }
 
