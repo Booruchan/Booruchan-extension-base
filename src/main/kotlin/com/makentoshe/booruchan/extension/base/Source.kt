@@ -1,5 +1,6 @@
 package com.makentoshe.booruchan.extension.base
 
+import com.makentoshe.booruchan.extension.base.factory.AutocompleteSearchFactory
 import com.makentoshe.booruchan.extension.base.factory.FetchPostsFactory
 import com.makentoshe.booruchan.extension.base.factory.HealthCheckFactory
 
@@ -19,5 +20,8 @@ interface Source {
 
     /** Network request and parsing providing factory for retrieving posts */
     val fetchPostsFactory: FetchPostsFactory? get() = null
+
+    /** Network request and parsing providing factory for autocompleting search */
+    val autocompleteSearchFactory: AutocompleteSearchFactory? get() = null
 }
 
