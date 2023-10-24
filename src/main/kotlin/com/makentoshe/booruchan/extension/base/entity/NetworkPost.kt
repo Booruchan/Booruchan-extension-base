@@ -6,4 +6,5 @@ interface NetworkPost {
     val previewImageUrl: String
     val previewImageWidth: Int
     val previewImageHeight: Int
+    val tags: List<String>
 }
