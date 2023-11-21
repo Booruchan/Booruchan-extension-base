@@ -3,6 +3,7 @@ package com.makentoshe.booruchan.extension.base
 import com.makentoshe.booruchan.extension.base.factory.AutocompleteSearchFactory
 import com.makentoshe.booruchan.extension.base.factory.FetchPostsFactory
 import com.makentoshe.booruchan.extension.base.factory.HealthCheckFactory
+import com.makentoshe.booruchan.extension.base.settings.SourceSettings
 
 interface Source {
 
@@ -14,6 +15,8 @@ interface Source {
 
     /** Source base url */
     val host: String
+
+    val settings: SourceSettings
 
     /** Network request factory for checking source availability */
     val healthCheckFactory: HealthCheckFactory? get() = null
