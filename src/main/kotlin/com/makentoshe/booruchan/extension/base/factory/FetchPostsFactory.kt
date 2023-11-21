@@ -26,7 +26,7 @@ abstract class FetchPostsFactory(
 
     /** How search tags should be separated */
     @Deprecated(message = "Deprecated. Use settings to access this field")
-    open val searchTagSeparator: String = settings.searchSettings.searchTagSeparator
+    open val searchTagSeparator: String = settings.searchSettings.searchTagAnd
 
     /** Returns a Network request that should be executed by network client */
     abstract fun buildRequest(request: FetchPostsRequest): NetworkRequest

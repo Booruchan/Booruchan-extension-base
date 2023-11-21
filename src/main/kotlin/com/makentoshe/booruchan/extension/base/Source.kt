@@ -27,4 +27,3 @@ interface Source {
     /** Network request and parsing providing factory for autocompleting search */
     val autocompleteSearchFactory: AutocompleteSearchFactory? get() = null
 }
-
