@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "org.makentoshe.booruchan"
-version = "0.3.3"
+version = "0.3.4"
 
 repositories {
     mavenCentral()
@@ -32,7 +32,7 @@ publishing {
         register<MavenPublication>("maven") {
             groupId = "om.github.makentoshe"
             artifactId = "booruchan-extension-base"
-            version = "0.3.3"
+            version = "0.3.4"
 
             afterEvaluate {
                 from(components["java"])
